@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mondo Italia — Política de Privacidad y Términos de Uso</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #dc1d24;
+            --primary-dark: #a81018;
+            --accent: #f0c914;
+            --navy: #29282f;
+            --text: #1E293B;
+            --text-muted: #64748B;
+            --bg: #fdf6f0;
+            --card: #FFFFFF;
+            --border: #E2E8F0;
+            --radius: 16px;
+            --shadow: 0 4px 24px rgba(41, 40, 47, .07);
+            --shadow-lg: 0 12px 48px rgba(41, 40, 47, .14);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.75;
+        }
+
+        /* ── Hero Header ─────────────────────────────── */
+        .site-hero {
+            background: linear-gradient(135deg, #29282f 0%, #3d0608 50%, #5c080d 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 28px 0 22px;
+        }
+
+        .site-hero::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 420px;
+            height: 420px;
+            background: radial-gradient(circle, rgba(220, 29, 36, .28) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .site-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -60px;
+            left: -40px;
+            width: 320px;
+            height: 320px;
+            background: radial-gradient(circle, rgba(240, 201, 20, .18) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-logo-img {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            object-fit: cover;
+            border: 2px solid rgba(255,255,255,.18);
+            flex-shrink: 0;
+        }
+
+        .hero-divider {
+            width: 1px;
+            height: 36px;
+            background: rgba(255, 255, 255, .22);
+            margin: 0 18px;
+            flex-shrink: 0;
+        }
+
+        .hero-app-name {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -.5px;
+            line-height: 1.1;
+        }
+
+        .hero-app-name span {
+            color: var(--accent);
+        }
+
+        .hero-subtitle {
+            font-size: .9rem;
+            color: rgba(255, 255, 255, .6);
+            font-weight: 400;
+            margin-top: 3px;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 6px;
+            margin-top: 14px;
+            flex-wrap: wrap;
+        }
+
+        .hero-badge {
+            background: rgba(255, 255, 255, .1);
+            border: 1px solid rgba(255, 255, 255, .18);
+            color: rgba(255, 255, 255, .85);
+            font-size: .76rem;
+            font-weight: 500;
+            padding: 5px 14px;
+            border-radius: 100px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        /* ── Sticky Nav ──────────────────────────────── */
+        .site-nav {
+            background: rgba(255, 255, 255, .97);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 300;
+            box-shadow: 0 2px 12px rgba(41, 40, 47, .07);
+        }
+
+        .site-nav .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            padding: 10px 24px;
+            flex-wrap: wrap;
+        }
+
+        .site-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: .875rem;
+            padding: 7px 16px;
+            border-radius: 8px;
+            transition: all .2s;
+        }
+
+        .site-nav a:hover {
+            background: #fef2f2;
+            color: var(--primary);
+        }
+
+        /* ── Content wrapper ─────────────────────────── */
+        .content-wrap {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 48px 20px 80px;
+        }
+
+        /* ── Policy section cards ────────────────────── */
+        .policy-section {
+            background: var(--card);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            padding: 44px 48px;
+            margin-bottom: 28px;
+            box-shadow: var(--shadow);
+            transition: box-shadow .3s;
+        }
+
+        .policy-section:hover {
+            box-shadow: var(--shadow-lg);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding-bottom: 20px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .section-icon.privacy  { background: #fef2f2; color: var(--primary); }
+        .section-icon.terms    { background: #fffbeb; color: #b45309; }
+        .section-icon.deletion { background: #fff1f2; color: #E11D48; }
+        .section-icon.contact  { background: #f0fdf4; color: #16A34A; }
+
+        .section-header h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin: 0 0 2px;
+        }
+
+        .section-date {
+            font-size: .77rem;
+            color: var(--text-muted);
+            font-weight: 400;
+            margin: 0;
+        }
+
+        h3 {
+            font-size: .96rem;
+            font-weight: 700;
+            color: var(--text);
+            margin: 28px 0 8px;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        h3::before {
+            content: '';
+            display: inline-block;
+            width: 3px;
+            height: 15px;
+            background: linear-gradient(to bottom, var(--primary), var(--accent));
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+
+        p { margin-bottom: 12px; color: #475569; }
+
+        ul, ol { padding-left: 22px; margin-bottom: 12px; }
+        li { margin-bottom: 6px; color: #475569; }
+
+        code {
+            background: #F1F5F9;
+            color: var(--primary);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: .85em;
+        }
+
+        /* ── Notice box ──────────────────────────────── */
+        .notice {
+            background: linear-gradient(135deg, #fff5f5, #fffbeb);
+            border: 1px solid #fecaca;
+            border-left: 4px solid var(--primary);
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin: 4px 0 20px;
+            font-size: .9rem;
+            color: #7f1d1d;
+        }
+
+        .notice strong { color: #5c0a0f; }
+
+        /* ── Third-party table ───────────────────────── */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+        }
+
+        table { width: 100%; border-collapse: collapse; font-size: .875rem; }
+
+        thead th {
+            background: #F8FAFC;
+            color: var(--navy);
+            font-weight: 700;
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 2px solid var(--border);
+            font-size: .78rem;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+        }
+
+        tbody td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+            color: #475569;
+        }
+
+        tbody tr:last-child td { border-bottom: none; }
+        tbody tr:hover td { background: #F8FAFC; }
+        tbody td a { color: var(--primary); text-decoration: none; font-weight: 500; }
+        tbody td a:hover { text-decoration: underline; }
+
+        /* ── Contact grid ────────────────────────────── */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            background: #F8FAFC;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px 18px;
+        }
+
+        .contact-item .label {
+            font-size: .7rem;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .contact-item .value {
+            font-weight: 600;
+            color: var(--text);
+            font-size: .92rem;
+        }
+
+        .contact-item .value a { color: var(--primary); text-decoration: none; }
+        .contact-item.full { grid-column: 1 / -1; }
+
+        /* ── Footer ──────────────────────────────────── */
+        footer {
+            background: var(--navy);
+            color: rgba(255, 255, 255, .55);
+            padding: 40px 24px 32px;
+            text-align: center;
+            font-size: .82rem;
+        }
+
+        footer .footer-logo {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            object-fit: cover;
+            opacity: .65;
+            margin-bottom: 14px;
+        }
+
+        footer strong { color: rgba(255, 255, 255, .82); }
+
+        .footer-links {
+            margin-top: 16px;
+            display: flex;
+            gap: 4px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, .45);
+            text-decoration: none;
+            padding: 4px 12px;
+            border-radius: 6px;
+            transition: all .2s;
+            font-size: .8rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .footer-links a:hover {
+            background: rgba(255, 255, 255, .08);
+            color: rgba(255, 255, 255, .85);
+        }
+
+        /* ── Responsive ──────────────────────────────── */
+        @media (max-width: 768px) {
+            .policy-section { padding: 28px 22px; }
+            .contact-grid   { grid-template-columns: 1fr; }
+            .hero-app-name  { font-size: 1.4rem; }
+            .hero-divider   { height: 36px; margin: 0 14px; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-logo-img  { width: 48px; height: 48px; }
+            .site-hero      { padding: 30px 16px 24px; }
+            .hero-app-name  { font-size: 1.25rem; }
+        }
+
+        /* ── Language toggle ─────────────────────────── */
+        .nav-links { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+        .lang-toggle { display: flex; gap: 4px; flex-shrink: 0; }
+
+        .lang-btn {
+            padding: 5px 14px;
+            border-radius: 7px;
+            border: 1.5px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            font-size: .78rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all .2s;
+            font-family: inherit;
+            letter-spacing: .06em;
+            line-height: 1;
+        }
+
+        .lang-btn.active,
+        .lang-btn:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: #fff;
+        }
+
+        /* ── Language sections ───────────────────────── */
+        .lang-section          { display: none; }
+        .lang-section.visible  { display: block; }
+    </style>
+</head>
+
+<body>
+
+    <!-- ── Hero Header ──────────────────────────────────── -->
+    <header class="site-hero">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <img src="../imagen/mondoItaliaIcono.jpeg" alt="Mondo Italia" class="hero-logo-img">
+                <div class="hero-divider"></div>
+                <div>
+                    <div class="hero-app-name">Mondo <span>Italia</span></div>
+                    <div class="hero-subtitle">Política de Privacidad &amp; Términos y Condiciones</div>
+                </div>
+            </div>
+            <div class="hero-badges">
+                <span class="hero-badge"><i class="bi bi-shield-lock-fill"></i> Privacidad</span>
+                <span class="hero-badge"><i class="bi bi-file-earmark-text-fill"></i> Términos</span>
+                <span class="hero-badge"><i class="bi bi-trash3-fill"></i> Eliminación de Datos</span>
+                <span class="hero-badge"><i class="bi bi-phone-fill"></i> Android &amp; iOS</span>
+                <span class="hero-badge"><i class="bi bi-calendar3"></i> Vigente desde 20 may 2026</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ── Sticky Nav ───────────────────────────────────── -->
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <div class="nav-links" id="nav-links">
+                <a href="#privacidad"><i class="bi bi-shield-lock"></i> <span>Política de Privacidad</span></a>
+                <a href="#terminos"><i class="bi bi-file-earmark-text"></i> <span>Términos y Condiciones</span></a>
+                <a href="#eliminacion"><i class="bi bi-trash3"></i> <span>Eliminación de Datos</span></a>
+                <a href="#contacto"><i class="bi bi-envelope"></i> <span>Contacto</span></a>
+            </div>
+            <div class="lang-toggle">
+                <button class="lang-btn active" onclick="setLang('es', this)">ES</button>
+                <button class="lang-btn" onclick="setLang('en', this)">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content-wrap">
+
+        <!-- ═══════════════════════════════════════════════════
+             ESPAÑOL
+        ══════════════════════════════════════════════════════ -->
+        <div id="lang-es" class="lang-section visible">
+
+            <!-- ══════════════════════════════════════════════
+                 SECCIÓN 1 — POLÍTICA DE PRIVACIDAD
+            ═══════════════════════════════════════════════ -->
+            <section class="policy-section" id="privacidad">
+                <div class="section-header">
+                    <div class="section-icon privacy"><i class="bi bi-shield-lock-fill"></i></div>
+                    <div>
+                        <h2>Política de Privacidad</h2>
+                        <p class="section-date">Última actualización: 20 de mayo de 2026</p>
+                    </div>
+                </div>
+
+                <div class="notice">
+                    <strong><i class="bi bi-info-circle-fill me-1"></i>Resumen rápido:</strong>
+                    Mondo Italia es una app <strong>gratuita y sin publicidad</strong>. Recopilamos únicamente los datos
+                    mínimos necesarios para gestionar tus pedidos y reservas (nombre y teléfono) y los almacenamos de
+                    forma segura en la nube (Firebase). No compartimos tu información con terceros salvo los servicios
+                    de infraestructura propios de Google Firebase.
+                </div>
+
+                <h3>1. Responsable del tratamiento</h3>
+                <p>La aplicación <strong>Mondo Italia</strong> (identificador de paquete:
+                    <code>com.businessproductivitylabs.mondoitalia</code>) es desarrollada y mantenida por
+                    <strong>Business Productivity Labs</strong>. Si tienes preguntas sobre esta política, puedes
+                    contactarnos en la dirección indicada al final de este documento.
+                </p>
+
+                <h3>2. Datos que recopilamos</h3>
+                <p>La app <strong>no requiere registro ni creación de cuenta</strong>. Los datos personales se
+                    recopilan únicamente en el momento en que realizas un pedido o una reserva:</p>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Dato</th>
+                                <th>Motivo</th>
+                                <th>Obligatorio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Nombre</strong></td>
+                                <td>Identificar el pedido / reserva y contactar al cliente</td>
+                                <td>Sí</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Teléfono</strong></td>
+                                <td>Confirmar pedido o reserva y avisar al cliente</td>
+                                <td>Sí</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Dirección de entrega</strong></td>
+                                <td>Procesar pedidos de tipo <em>delivery</em></td>
+                                <td>Solo para delivery</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Número de mesa</strong></td>
+                                <td>Asociar pedidos en servicio de mesa</td>
+                                <td>Solo en mesa</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Notas del pedido / reserva</strong></td>
+                                <td>Indicaciones especiales (alergias, preferencias)</td>
+                                <td>No</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>También recopilamos datos de uso anónimos a través de <strong>Firebase Analytics y Crashlytics</strong>
+                    (ver sección de terceros) con el único propósito de mejorar la estabilidad y la experiencia de uso
+                    de la aplicación.</p>
+
+                <h3>3. Cómo y dónde se almacenan los datos</h3>
+                <p>Los datos de pedidos y reservas se almacenan en <strong>Google Firebase Firestore</strong>, una base
+                    de datos en la nube operada por Google LLC. Los datos se encuentran protegidos con reglas de
+                    seguridad que impiden el acceso público no autorizado. Firebase cumple con los estándares
+                    ISO 27001, SOC 1/2/3 y GDPR.</p>
+
+                <h3>4. Servicios de terceros</h3>
+                <p>Mondo Italia integra los siguientes servicios de Google Firebase:</p>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Servicio</th>
+                                <th>Finalidad</th>
+                                <th>Datos que puede tratar</th>
+                                <th>Política oficial</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Firebase Firestore</strong></td>
+                                <td>Almacenar pedidos, reservas y menú</td>
+                                <td>Datos de pedido/reserva (nombre, teléfono, dirección, ítems)</td>
+                                <td rowspan="5"><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy <i class="bi bi-box-arrow-up-right" style="font-size:.7em"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Firebase Storage</strong></td>
+                                <td>Almacenar imágenes del menú</td>
+                                <td>Archivos de imagen (sin datos personales)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Firebase Cloud Messaging (FCM)</strong></td>
+                                <td>Enviar notificaciones push sobre pedidos y promociones</td>
+                                <td>Token de dispositivo (anónimo)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Firebase Analytics</strong></td>
+                                <td>Estadísticas anónimas de uso de la app</td>
+                                <td>Eventos de navegación anonimizados, modelo de dispositivo</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Firebase Crashlytics</strong></td>
+                                <td>Detectar y reportar errores de la app</td>
+                                <td>Registros de errores anónimos, versión de OS</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="notice">
+                    Mondo Italia <strong>no muestra anuncios</strong> y <strong>no vende ni comparte</strong>
+                    tus datos personales con ningún anunciante ni tercero ajeno a los servicios de Firebase indicados
+                    anteriormente.
+                </div>
+
+                <h3>5. Notificaciones push</h3>
+                <p>Si concedes el permiso, la app utiliza <strong>Firebase Cloud Messaging (FCM)</strong> junto con la
+                    librería <strong>Notifee</strong> para enviarte notificaciones sobre el estado de tu pedido y
+                    promociones del restaurante. Puedes revocar este permiso en cualquier momento desde los ajustes de
+                    tu dispositivo o desde la pantalla de Perfil de la app.</p>
+
+                <h3>6. Permisos solicitados</h3>
+                <ul>
+                    <li><strong>INTERNET</strong> — Necesario para conectarse a Firebase y cargar el menú, pedidos y
+                        reservas.</li>
+                    <li><strong>POST_NOTIFICATIONS</strong> — Para enviarte notificaciones del estado de tu pedido
+                        (Android 13+). Opcional.</li>
+                    <li><strong>ACCESS_FINE_LOCATION / ACCESS_COARSE_LOCATION</strong> — Para autocompletar tu
+                        dirección de entrega. Solo se usa en el momento de introducir la dirección. Opcional.</li>
+                    <li><strong>CAMERA / READ_MEDIA_IMAGES</strong> — Para que el restaurante actualice las imágenes del
+                        menú (uso interno del restaurante). Opcional.</li>
+                    <li><strong>RECEIVE_BOOT_COMPLETED</strong> — Para reprogramar recordatorios locales tras
+                        reiniciar el dispositivo. Opcional.</li>
+                </ul>
+
+                <h3>7. Retención de datos</h3>
+                <p>Los datos de pedidos y reservas se retienen el tiempo necesario para la correcta gestión operacional
+                    del restaurante (mínimo 1 año por requerimientos contables y fiscales). Puedes solicitar la
+                    eliminación de tus datos en cualquier momento escribiendo a
+                    <a href="mailto:businessproductivitylabs@gmail.com">businessproductivitylabs@gmail.com</a>.</p>
+
+                <h3>8. Derechos del usuario (GDPR / LGPD)</h3>
+                <ul>
+                    <li><strong>Acceso:</strong> solicita un resumen de los datos que tenemos sobre ti escribiendo a
+                        <a href="mailto:businessproductivitylabs@gmail.com">businessproductivitylabs@gmail.com</a>.</li>
+                    <li><strong>Rectificación:</strong> si un dato es incorrecto, contáctanos y lo corregiremos
+                        inmediatamente.</li>
+                    <li><strong>Supresión:</strong> puedes solicitar la eliminación de todos tus datos en cualquier
+                        momento. Ver sección <a href="#eliminacion">Eliminación de Datos</a>.</li>
+                    <li><strong>Portabilidad:</strong> puedes solicitar una copia de tus datos en formato legible por
+                        máquina.</li>
+                    <li><strong>Oposición:</strong> puedes oponerte al uso de tus datos para comunicaciones de
+                        marketing. No utilizaremos tu información para ningún fin distinto a la gestión de tus
+                        pedidos y reservas sin tu consentimiento.</li>
+                </ul>
+
+                <h3>9. Seguridad</h3>
+                <p>Todos los datos se transmiten cifrados mediante <strong>TLS 1.2+</strong>. El acceso a Firebase
+                    Firestore está restringido por reglas de seguridad que solo permiten operaciones autorizadas.
+                    Nadie fuera del equipo de desarrollo y del restaurante puede acceder a tus datos.</p>
+
+                <h3>10. Menores de edad</h3>
+                <p>La aplicación no está dirigida a menores de 13 años. No recopilamos intencionalmente información de
+                    menores. Si eres padre o tutor y crees que tu hijo ha proporcionado datos personales,
+                    contáctanos para eliminarlos.</p>
+
+                <h3>11. Cambios en esta Política</h3>
+                <p>Si realizamos cambios relevantes actualizaremos la fecha al inicio de este documento y, si es
+                    posible, te lo notificaremos a través de la app. Para consultas, escríbenos a
+                    <a href="mailto:businessproductivitylabs@gmail.com">businessproductivitylabs@gmail.com</a>.
+                </p>
+            </section>
+
+            <!-- ══════════════════════════════════════════════
+                 SECCIÓN 2 — TÉRMINOS Y CONDICIONES
+            ═══════════════════════════════════════════════ -->
+            <section class="policy-section" id="terminos">
+                <div class="section-header">
+                    <div class="section-icon terms"><i class="bi bi-file-earmark-text-fill"></i></div>
+                    <div>
+                        <h2>Términos y Condiciones</h2>
+                        <p class="section-date">Última actualización: 20 de mayo de 2026</p>
+                    </div>
+                </div>
+
+                <div class="notice">
+                    Al descargar o utilizar <strong>Mondo Italia</strong>, aceptas los presentes Términos y Condiciones.
+                    Si no estás de acuerdo, por favor desinstala la aplicación.
+                </div>
+
+                <h3>1. Descripción del servicio</h3>
+                <p><strong>Mondo Italia</strong> es la aplicación móvil oficial del restaurante Mondo Italia, operada
+                    por <strong>Business Productivity Labs</strong>. Permite a los clientes consultar el menú completo
+                    con fotos y precios, realizar pedidos para recoger en local, solicitar delivery o pedir directamente
+                    en mesa, reservar mesa y recibir notificaciones sobre el estado de sus pedidos y promociones
+                    especiales.</p>
+                <p>La aplicación es <strong>completamente gratuita</strong> para los clientes y <strong>no contiene
+                    publicidad</strong>.</p>
+
+                <h3>2. Pedidos y reservas</h3>
+                <ul>
+                    <li>Los pedidos se procesan a través de la app y son atendidos directamente por el restaurante.
+                        La confirmación de disponibilidad es responsabilidad del restaurante.</li>
+                    <li>Los precios, disponibilidad de platos y horarios de atención pueden cambiar sin previo aviso.
+                        La app mostrará siempre la información más reciente disponible.</li>
+                    <li>Los pedidos de tipo <em>delivery</em> requieren que la dirección de entrega se encuentre dentro
+                        del área de cobertura del restaurante.</li>
+                    <li><strong>El pago se realiza directamente con el restaurante</strong> (en caja o contra entrega).
+                        La app actualmente no procesa pagos en línea.</li>
+                    <li>Para cancelar un pedido ya confirmado, contacta directamente al restaurante.</li>
+                </ul>
+
+                <h3>3. Responsabilidad sobre los pedidos</h3>
+                <p>Business Productivity Labs actúa como proveedor tecnológico de la app. La responsabilidad sobre la
+                    preparación, entrega, calidad de los alimentos y atención al cliente corresponde
+                    exclusivamente al restaurante <strong>Mondo Italia</strong>.</p>
+
+                <h3>4. Uso aceptable</h3>
+                <p>Queda prohibido:</p>
+                <ul>
+                    <li>Realizar pedidos o reservas falsas o fraudulentas.</li>
+                    <li>Realizar ingeniería inversa, descompilar o modificar la aplicación.</li>
+                    <li>Usar la app para cualquier propósito ilegal o dañino.</li>
+                    <li>Intentar acceder de manera no autorizada a los sistemas del restaurante o de Firebase.</li>
+                    <li>Distribuir copias no autorizadas de la app.</li>
+                </ul>
+
+                <h3>5. Propiedad intelectual</h3>
+                <p>El código fuente, diseño, logotipo, nombre "Mondo Italia" y todos los elementos gráficos de la app
+                    son propiedad de <strong>Business Productivity Labs</strong> o del restaurante Mondo Italia, según
+                    corresponda. Las imágenes y descripciones del menú son propiedad del restaurante.</p>
+                <p>Los datos que tú proporcionas (nombre, teléfono, dirección, notas de pedido) son de tu propiedad;
+                    únicamente los usamos para gestionar tus pedidos y reservas.</p>
+
+                <h3>6. Limitación de responsabilidad</h3>
+                <p>Business Productivity Labs no se responsabiliza por:</p>
+                <ul>
+                    <li>Errores u omisiones en el contenido del menú (precios, ingredientes, disponibilidad).</li>
+                    <li>Retrasos o incidencias en la preparación o entrega de pedidos.</li>
+                    <li>Problemas de conectividad a internet que impidan el uso de la app.</li>
+                    <li>Pérdidas derivadas de interrupciones de servicio de Firebase (fuerza mayor).</li>
+                </ul>
+
+                <h3>7. Modificaciones al servicio</h3>
+                <p>Nos reservamos el derecho de modificar, suspender o descontinuar funcionalidades de la app en
+                    cualquier momento, con o sin previo aviso.</p>
+
+                <h3>8. Ley aplicable y jurisdicción</h3>
+                <p>Estos Términos se rigen por las leyes de la <strong>República de Colombia</strong>. Cualquier
+                    controversia se someterá a la jurisdicción exclusiva de los tribunales de
+                    <strong>Bogotá D.C.</strong>
+                </p>
+            </section>
+
+            <!-- ══════════════════════════════════════════════
+                 SECCIÓN 3 — ELIMINACIÓN DE DATOS
+            ═══════════════════════════════════════════════ -->
+            <section class="policy-section" id="eliminacion">
+                <div class="section-header">
+                    <div class="section-icon deletion"><i class="bi bi-trash3-fill"></i></div>
+                    <div>
+                        <h2>Eliminación de Datos</h2>
+                        <p class="section-date">Aplicación: Mondo Italia · Business Productivity Labs</p>
+                    </div>
+                </div>
+
+                <h3>Cómo solicitar la eliminación de tus datos</h3>
+                <p>Dado que los datos de pedidos y reservas se almacenan en la nube (Firebase Firestore), la
+                    eliminación debe realizarse manualmente por nuestro equipo. Puedes solicitarlo de estas formas:</p>
+                <ol>
+                    <li>Abre <strong>Mondo Italia</strong> y ve a la pantalla <strong>Perfil</strong>.</li>
+                    <li>Desplázate hasta la sección <strong>Privacidad</strong>.</li>
+                    <li>Pulsa <strong>"Eliminar mis datos"</strong> y confirma tu solicitud.</li>
+                </ol>
+                <p><strong>O bien</strong>, envía un correo a
+                    <a href="mailto:businessproductivitylabs@gmail.com">businessproductivitylabs@gmail.com</a>
+                    con el asunto <strong>"Eliminación de datos – Mondo Italia"</strong> e indica el nombre y
+                    teléfono asociados a tus pedidos/reservas. Procesaremos tu solicitud en un plazo máximo de
+                    <strong>5 días hábiles</strong>.</p>
+
+                <h3>Qué se elimina</h3>
+                <ul>
+                    <li>Todos los pedidos asociados a tu nombre y teléfono</li>
+                    <li>Todas las reservas asociadas a tu nombre y teléfono</li>
+                    <li>Tu perfil de usuario (si fue creado)</li>
+                    <li>El token de notificaciones push de tu dispositivo</li>
+                </ul>
+
+                <h3>Qué NO se puede eliminar</h3>
+                <ul>
+                    <li><strong>Datos de Firebase Analytics / Crashlytics:</strong> los datos de uso ya anonimizados
+                        no pueden vincularse de vuelta a tu persona y no pueden ser eliminados individualmente.
+                        Consulta
+                        <a href="https://firebase.google.com/support/privacy" target="_blank"
+                            rel="noopener">firebase.google.com/support/privacy</a>.</li>
+                    <li><strong>Registros contables internos del restaurante:</strong> por obligación legal pueden
+                        conservarse durante el período mínimo exigido por la normativa fiscal colombiana.</li>
+                </ul>
+
+                <h3>Instalación de la app / Desinstalación</h3>
+                <p>Desinstalar la app <strong>no elimina</strong> los datos almacenados en Firebase Firestore.
+                    Si deseas que tus datos sean eliminados definitivamente, debes realizar la solicitud
+                    explícita como se indica arriba.</p>
+            </section>
+
+            <!-- ══════════════════════════════════════════════
+                 SECCIÓN 4 — CONTACTO
+            ═══════════════════════════════════════════════ -->
+            <section class="policy-section" id="contacto">
+                <div class="section-header">
+                    <div class="section-icon contact"><i class="bi bi-envelope-fill"></i></div>
+                    <div>
+                        <h2>Contacto</h2>
+                        <p class="section-date">¿Preguntas sobre privacidad, pedidos o soporte?</p>
+                    </div>
+                </div>
+
+                <p>Si tienes dudas sobre esta Política de Privacidad, los Términos de Uso, necesitas eliminar tus datos
+                    o requieres soporte técnico, puedes contactarnos a través de:</p>
+
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div class="label">Aplicación</div>
+                        <div class="value">Mondo Italia</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="label">Desarrollador</div>
+                        <div class="value">Business Productivity Labs</div>
+                    </div>
+                    <div class="contact-item full">
+                        <div class="label">Correo electrónico</div>
+                        <div class="value">
+                            <a href="mailto:businessproductivitylabs@gmail.com">
+                                <i class="bi bi-envelope me-1"></i>businessproductivitylabs@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-item full">
+                        <div class="label">Paquete de la app</div>
+                        <div class="value"><code>com.businessproductivitylabs.mondoitalia</code></div>
+                    </div>
+                    <div class="contact-item full">
+                        <div class="label">Fecha de vigencia</div>
+                        <div class="value">20 de mayo de 2026</div>
+                    </div>
+                </div>
+
+                <p style="margin-top:20px; font-size:.85rem; color:var(--text-muted);">
+                    <i class="bi bi-clock me-1"></i> Intentaremos responder todas las consultas en un plazo máximo de
+                    5 días hábiles.
+                </p>
+            </section>
+
+        </div><!-- /lang-es -->
+
+        <!-- ═══════════════════════════════════════════════════
+             ENGLISH
+        ══════════════════════════════════════════════════════ -->
+        <div id="lang-en" class="lang-section">
+
+            <!-- ══════════════════════════════════════════════
+                 SECTION 1 — PRIVACY POLICY
+            ═══════════════════════════════════════════════ -->
+            <section class="policy-section" id="privacy">
+                <div class="section-header">
+                    <div class="section-icon privacy"><i class="bi bi-shield-lock-fill"></i></div>
+                    <div>
+                        <h2>Privacy Policy</h2>
+                        <p class="section-date">Last updated: May 20, 2026</p>
+                    </div>
+                </div>
+
+                <div class="notice">
+                    <strong><i class="bi bi-info-circle-fill me-1"></i>Quick summary:</strong>
+                    Mondo Italia is a <strong>free, ad-free app</strong>. We only collect the minimum data required
+                    to manage your orders and reservations (name and phone number) and store it securely in the cloud
+                    (Firebase). We do not share your information with third parties beyond the Google Firebase
+                    infrastructure services described below.
+                </div>
+
+                <h3>1. Data controller</h3>
+                <p>The application <strong>Mondo Italia</strong> (package identifier:
+                    <code>com.businessproductivitylabs.mondoitalia</code>) is developed and maintained by
+                    <strong>Business Productivity Labs</strong>. If you have questions about this policy, you may
+                    contact us at the address indicated at the end of this document.
+                </p>
+
+                <h3>2. Data we collect</h3>
+                <p>The app <strong>does not require registration or account creation</strong>. Personal data is
+                    collected only when you place an order or make a reservation:</p>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Purpose</th>
+                                <th>Required</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Name</strong></td>
+                                <td>Identify the order / reservation and contact the customer</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Phone number</strong></td>
+                                <td>Confirm the order or reservation and notify the customer</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Delivery address</strong></td>
+                                <td>Process <em>delivery</em> orders</td>
+                                <td>Delivery orders only</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Table number</strong></td>
+                                <td>Associate orders for table service</td>
+                                <td>Table service only</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Order / reservation notes</strong></td>
+                                <td>Special instructions (allergies, preferences)</td>
+                                <td>No</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>We also collect anonymous usage data through <strong>Firebase Analytics and Crashlytics</strong>
+                    (see third-party services section) solely to improve app stability and user experience.</p>
+
+                <h3>3. How and where data is stored</h3>
+                <p>Order and reservation data is stored in <strong>Google Firebase Firestore</strong>, a cloud
+                    database operated by Google LLC, protected by security rules that prevent unauthorized public
+                    access. Firebase complies with ISO 27001, SOC 1/2/3, and GDPR standards.</p>
+
+                <h3>4. Third-party services</h3>
+                <p>Mondo Italia integrates the following Google Firebase services:</p>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Service</th>
+                                <th>Purpose</th>
+                                <th>Data it may process</th>
+                                <th>Official policy</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Firebase Firestore</strong></td>
+                                <td>Store orders, reservations, and menu</td>
+                                <td>Order/reservation data (name, phone, address, items)</td>
+                                <td rowspan="5"><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy <i class="bi bi-box-arrow-up-right" style="font-size:.7em"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Firebase Storage</strong></td>
+                                <td>Store menu images</td>
+                                <td>Image files (no personal data)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Firebase Cloud Messaging (FCM)</strong></td>
+                                <td>Send push notifications about orders and promotions</td>
+                                <td>Anonymous device token</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Firebase Analytics</strong></td>
+                                <td>Anonymous app usage statistics</td>
+                                <td>Anonymised navigation events, device model</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Firebase Crashlytics</strong></td>
+                                <td>Detect and report app errors</td>
+                                <td>Anonymous error logs, OS version</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="notice">
+                    Mondo Italia <strong>does not display ads</strong> and <strong>does not sell or share</strong>
+                    your personal data with any advertiser or third party beyond the Firebase services listed above.
+                </div>
+
+                <h3>5. Push notifications</h3>
+                <p>If you grant permission, the app uses <strong>Firebase Cloud Messaging (FCM)</strong> together
+                    with the <strong>Notifee</strong> library to send you notifications about your order status and
+                    restaurant promotions. You can revoke this permission at any time from your device settings or
+                    from the Profile screen within the app.</p>
+
+                <h3>6. Requested permissions</h3>
+                <ul>
+                    <li><strong>INTERNET</strong> — Required to connect to Firebase and load the menu, orders, and
+                        reservations.</li>
+                    <li><strong>POST_NOTIFICATIONS</strong> — To send you order status notifications (Android 13+).
+                        Optional.</li>
+                    <li><strong>ACCESS_FINE_LOCATION / ACCESS_COARSE_LOCATION</strong> — To auto-fill your delivery
+                        address. Only used during address entry. Optional.</li>
+                    <li><strong>CAMERA / READ_MEDIA_IMAGES</strong> — For the restaurant to update menu images
+                        (internal restaurant use). Optional.</li>
+                    <li><strong>RECEIVE_BOOT_COMPLETED</strong> — To reschedule local reminders after device
+                        restart. Optional.</li>
+                </ul>
+
+                <h3>7. Data retention</h3>
+                <p>Order and reservation data is retained for as long as necessary for the restaurant's operational
+                    management (minimum 1 year for accounting and tax compliance). You may request deletion of your
+                    data at any time by emailing
+                    <a href="mailto:businessproductivitylabs@gmail.com">businessproductivitylabs@gmail.com</a>.</p>
+
+                <h3>8. User rights (GDPR / LGPD)</h3>
+                <ul>
+                    <li><strong>Access:</strong> request a summary of the data we hold about you at
+                        <a href="mailto:businessproductivitylabs@gmail.com">businessproductivitylabs@gmail.com</a>.</li>
+                    <li><strong>Rectification:</strong> if any data is incorrect, contact us and we will correct
+                        it immediately.</li>
+                    <li><strong>Erasure:</strong> you may request deletion of all your data at any time. See the
+                        <a href="#deletion">Data Deletion</a> section.</li>
+                    <li><strong>Portability:</strong> you may request a copy of your data in machine-readable format.</li>
+                    <li><strong>Objection:</strong> you may object to use of your data for marketing communications.
+                        We will not use your information for any purpose other than managing your orders and
+                        reservations without your consent.</li>
+                </ul>
+
+                <h3>9. Security</h3>
+                <p>All data is transmitted encrypted via <strong>TLS 1.2+</strong>. Access to Firebase Firestore
+                    is restricted by security rules that only allow authorized operations. No one outside the
+                    development team and the restaurant can access your data.</p>
+
+                <h3>10. Minors</h3>
+                <p>The application is not intended for children under 13. We do not intentionally collect
+                    information from minors. If you are a parent or guardian and believe your child has provided
+                    personal data, please contact us to have it removed.</p>
+
+                <h3>11. Changes to this Policy</h3>
+                <p>If we make significant changes, we will update the effective date at the top of this document
+                    and, when possible, notify you through the app. For questions, email us at
+                    <a href="mailto:businessproductivitylabs@gmail.com">businessproductivitylabs@gmail.com</a>.
+                </p>
+            </section>
+
+            <!-- ══════════════════════════════════════════════
+                 SECTION 2 — TERMS AND CONDITIONS
+            ═══════════════════════════════════════════════ -->
+            <section class="policy-section" id="terms">
+                <div class="section-header">
+                    <div class="section-icon terms"><i class="bi bi-file-earmark-text-fill"></i></div>
+                    <div>
+                        <h2>Terms and Conditions</h2>
+                        <p class="section-date">Last updated: May 20, 2026</p>
+                    </div>
+                </div>
+
+                <div class="notice">
+                    By downloading or using <strong>Mondo Italia</strong>, you agree to these Terms and Conditions.
+                    If you do not agree, please uninstall the application.
+                </div>
+
+                <h3>1. Description of service</h3>
+                <p><strong>Mondo Italia</strong> is the official mobile app of the Mondo Italia restaurant, operated
+                    by <strong>Business Productivity Labs</strong>. It allows customers to browse the full menu with
+                    photos and prices, place orders for takeaway, delivery, or table service, make table reservations,
+                    and receive notifications about order status and special promotions.</p>
+                <p>The application is <strong>completely free</strong> for customers and <strong>contains no
+                    advertising</strong>.</p>
+
+                <h3>2. Orders and reservations</h3>
+                <ul>
+                    <li>Orders are processed through the app and handled directly by the restaurant. Order
+                        confirmation and availability are the restaurant's responsibility.</li>
+                    <li>Prices, dish availability, and opening hours may change without prior notice. The app will
+                        always display the most up-to-date information available.</li>
+                    <li>Delivery orders require the delivery address to be within the restaurant's coverage area.</li>
+                    <li><strong>Payment is made directly with the restaurant</strong> (at the counter or on delivery).
+                        The app does not currently process online payments.</li>
+                    <li>To cancel a confirmed order, please contact the restaurant directly.</li>
+                </ul>
+
+                <h3>3. Responsibility for orders</h3>
+                <p>Business Productivity Labs acts as the technology provider for the app. Responsibility for food
+                    preparation, delivery, quality, and customer service rests exclusively with the
+                    <strong>Mondo Italia</strong> restaurant.</p>
+
+                <h3>4. Acceptable use</h3>
+                <p>The following are prohibited:</p>
+                <ul>
+                    <li>Placing false or fraudulent orders or reservations.</li>
+                    <li>Reverse engineering, decompiling, or modifying the application.</li>
+                    <li>Using the app for any illegal or harmful purpose.</li>
+                    <li>Attempting unauthorized access to the restaurant's or Firebase's systems.</li>
+                    <li>Distributing unauthorized copies of the app.</li>
+                </ul>
+
+                <h3>5. Intellectual property</h3>
+                <p>The source code, design, logo, name "Mondo Italia," and all graphic elements of the app are the
+                    property of <strong>Business Productivity Labs</strong> or the Mondo Italia restaurant, as
+                    applicable. Menu images and descriptions are the property of the restaurant.</p>
+                <p>The data you provide (name, phone, address, order notes) belongs to you; we use it solely to
+                    manage your orders and reservations.</p>
+
+                <h3>6. Limitation of liability</h3>
+                <p>Business Productivity Labs is not responsible for:</p>
+                <ul>
+                    <li>Errors or omissions in menu content (prices, ingredients, availability).</li>
+                    <li>Delays or incidents in order preparation or delivery.</li>
+                    <li>Internet connectivity issues that prevent use of the app.</li>
+                    <li>Losses arising from Firebase service interruptions (force majeure).</li>
+                </ul>
+
+                <h3>7. Changes to the service</h3>
+                <p>We reserve the right to modify, suspend, or discontinue app features at any time, with or
+                    without prior notice.</p>
+
+                <h3>8. Governing law and jurisdiction</h3>
+                <p>These Terms are governed by the laws of the <strong>Republic of Colombia</strong>. Any dispute
+                    shall be subject to the exclusive jurisdiction of the courts of <strong>Bogotá D.C.</strong></p>
+            </section>
+
+            <!-- ══════════════════════════════════════════════
+                 SECTION 3 — DATA DELETION
+            ═══════════════════════════════════════════════ -->
+            <section class="policy-section" id="deletion">
+                <div class="section-header">
+                    <div class="section-icon deletion"><i class="bi bi-trash3-fill"></i></div>
+                    <div>
+                        <h2>Data Deletion</h2>
+                        <p class="section-date">App: Mondo Italia · Business Productivity Labs</p>
+                    </div>
+                </div>
+
+                <h3>How to request deletion of your data</h3>
+                <p>Since order and reservation data is stored in the cloud (Firebase Firestore), deletion must be
+                    carried out manually by our team. You can request this in two ways:</p>
+                <ol>
+                    <li>Open <strong>Mondo Italia</strong> and go to the <strong>Profile</strong> screen.</li>
+                    <li>Scroll to the <strong>Privacy</strong> section.</li>
+                    <li>Tap <strong>"Delete my data"</strong> and confirm your request.</li>
+                </ol>
+                <p><strong>Alternatively</strong>, send an email to
+                    <a href="mailto:businessproductivitylabs@gmail.com">businessproductivitylabs@gmail.com</a>
+                    with the subject <strong>"Data Deletion – Mondo Italia"</strong> and include the name and
+                    phone number associated with your orders/reservations. We will process your request within a
+                    maximum of <strong>5 business days</strong>.</p>
+
+                <h3>What is deleted</h3>
+                <ul>
+                    <li>All orders associated with your name and phone number</li>
+                    <li>All reservations associated with your name and phone number</li>
+                    <li>Your user profile (if created)</li>
+                    <li>Your device's push notification token</li>
+                </ul>
+
+                <h3>What is NOT deleted</h3>
+                <ul>
+                    <li><strong>Firebase Analytics / Crashlytics data:</strong> already-anonymised usage data cannot
+                        be linked back to you and cannot be individually deleted. See
+                        <a href="https://firebase.google.com/support/privacy" target="_blank"
+                            rel="noopener">firebase.google.com/support/privacy</a>.</li>
+                    <li><strong>Internal restaurant accounting records:</strong> may be retained for the minimum
+                        period required by Colombian tax regulations.</li>
+                </ul>
+
+                <h3>Uninstalling the app</h3>
+                <p>Uninstalling the app <strong>does not delete</strong> data stored in Firebase Firestore. If you
+                    want your data permanently removed, you must submit an explicit deletion request as described
+                    above.</p>
+            </section>
+
+            <!-- ══════════════════════════════════════════════
+                 SECTION 4 — CONTACT
+            ═══════════════════════════════════════════════ -->
+            <section class="policy-section" id="contact">
+                <div class="section-header">
+                    <div class="section-icon contact"><i class="bi bi-envelope-fill"></i></div>
+                    <div>
+                        <h2>Contact</h2>
+                        <p class="section-date">Questions about privacy, orders, or support?</p>
+                    </div>
+                </div>
+
+                <p>If you have questions about this Privacy Policy, the Terms of Use, need to delete your data, or
+                    require technical support, you can reach us at:</p>
+
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div class="label">Application</div>
+                        <div class="value">Mondo Italia</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="label">Developer</div>
+                        <div class="value">Business Productivity Labs</div>
+                    </div>
+                    <div class="contact-item full">
+                        <div class="label">Email address</div>
+                        <div class="value">
+                            <a href="mailto:businessproductivitylabs@gmail.com">
+                                <i class="bi bi-envelope me-1"></i>businessproductivitylabs@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-item full">
+                        <div class="label">App package</div>
+                        <div class="value"><code>com.businessproductivitylabs.mondoitalia</code></div>
+                    </div>
+                    <div class="contact-item full">
+                        <div class="label">Effective date</div>
+                        <div class="value">May 20, 2026</div>
+                    </div>
+                </div>
+
+                <p style="margin-top:20px; font-size:.85rem; color:var(--text-muted);">
+                    <i class="bi bi-clock me-1"></i> We will try to respond to all inquiries within a maximum of
+                    5 business days.
+                </p>
+            </section>
+
+        </div><!-- /lang-en -->
+
+    </div><!-- /content-wrap -->
+
+    <!-- ── Footer ───────────────────────────────────────── -->
+    <footer>
+        <img src="../imagen/mondoItaliaIcono.jpeg" alt="Mondo Italia" class="footer-logo"><br>
+        <strong>© 2026 Mondo Italia</strong> — Business Productivity Labs. Todos los derechos reservados.
+        <div class="footer-links">
+            <a href="#privacidad"><i class="bi bi-shield-lock"></i> Política de Privacidad</a>
+            <a href="#terminos"><i class="bi bi-file-earmark-text"></i> Términos y Condiciones</a>
+            <a href="#eliminacion"><i class="bi bi-trash3"></i> Eliminación de Datos</a>
+            <a href="#contacto"><i class="bi bi-envelope"></i> Contacto</a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        var navCfg = {
+            es: [
+                { href: '#privacidad', text: 'Política de Privacidad' },
+                { href: '#terminos',   text: 'Términos y Condiciones' },
+                { href: '#eliminacion',text: 'Eliminación de Datos' },
+                { href: '#contacto',   text: 'Contacto' }
+            ],
+            en: [
+                { href: '#privacy',  text: 'Privacy Policy' },
+                { href: '#terms',    text: 'Terms & Conditions' },
+                { href: '#deletion', text: 'Data Deletion' },
+                { href: '#contact',  text: 'Contact' }
+            ]
+        };
+
+        function setLang(lang, btn) {
+            document.querySelectorAll('.lang-section').forEach(function (el) {
+                el.classList.remove('visible');
+            });
+            document.querySelectorAll('.lang-btn').forEach(function (b) {
+                b.classList.remove('active');
+            });
+            document.getElementById('lang-' + lang).classList.add('visible');
+            btn.classList.add('active');
+
+            var links = document.querySelectorAll('#nav-links a');
+            navCfg[lang].forEach(function (item, i) {
+                links[i].href = item.href;
+                links[i].querySelector('span').textContent = item.text;
+            });
+        }
+    </script>
+
+</body>
+</html>
